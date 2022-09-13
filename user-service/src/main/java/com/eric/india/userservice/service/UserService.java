@@ -31,7 +31,7 @@ public class UserService {
 
         log.info("User info : localhost:9001/api/v1/departments/" + user.getDepartmentId());
 
-        Department department = restTemplate.getForObject("http://localhost:9001/api/v1/departments/" + user.getDepartmentId(), Department.class);
+        Department department = restTemplate.getForObject("http://department-service/api/v1/departments/" + user.getDepartmentId(), Department.class);
 
         response.setUser(user);
         response.setDepartment(department);
